@@ -30,6 +30,7 @@ body{
     --posTextColor: white;
     --negTextColor: black;
     --footerTxtColor: white;
+    --footerBg: var(--tamerRed);
 }
 
 /* Utils */
@@ -101,7 +102,7 @@ main{
 
 footer{
     width: 100%;
-    background-color: #459FEF;
+    background-color:var(--footerBg);
     padding: 1rem 0;
 }
 
