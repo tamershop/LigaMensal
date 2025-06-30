@@ -1,0 +1,134 @@
+/* Global */
+body, html{
+    height: 100%;
+}
+
+:root{
+    --tamerRed: #C03834;
+    --tamerGray: #2F2F2F;
+    --tamerYellow: #EFB945;
+    --tamerBlue: #459FEF;
+
+    --tamerFont: 'Mont Heavy';
+    --shopFont: 'Designer';
+}
+
+body{
+    --contentWidth: 90%;
+    margin: 0%;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 0.8rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Themes */
+.light-theme{
+    --headerBg: var(--tamerGray);
+    --headerMenuBg: var(--tamerRed);
+    --posTextColor: white;
+    --negTextColor: black;
+    --footerTxtColor: white;
+}
+
+/* Utils */
+.no-display{
+    display: none;
+}
+
+.hidden-no-width{
+    transition: all 1s;
+    width: 0px;
+    height: 0px;
+    opacity: 0;
+}
+
+.hidden{
+    transition: all 0.5s;
+    opacity: 0;
+}
+
+.link{
+    text-decoration: none;
+}
+
+.icon-tiny{
+    height: 1rem;
+}
+
+/* Top */
+header{
+    width: 100%;
+    background-color: var(--headerBg);
+}
+
+header .menu{
+    display: flex;
+    flex-direction: row;
+    background-color: var(--headerMenuBg);
+    padding-left: 1rem;
+}
+
+.tab-link{
+    color: var(--posTextColor);
+    text-decoration: none;
+    padding: 0.5rem;
+}
+
+.tab-link:hover{
+    transition: all 0.2s;
+    filter: brightness(0.8);
+    cursor: pointer;
+}
+
+.logo{
+    font-family: var(--tamerFont);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+main{
+    width: var(--contentWidth);
+    flex: auto 1 0;
+}
+
+.logo img{
+    height: 5rem;
+    margin: 1rem 1rem 1rem 2rem;
+}
+
+footer{
+    width: 100%;
+    background-color: #459FEF;
+    padding: 1rem 0;
+}
+
+.footer-link{
+    margin-left: 1rem;
+    color: var(--footerTxtColor);
+    font-size: 1rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.footer-link:hover{
+    transition: all 0.2s;
+    filter: brightness(0.8);
+    cursor: pointer;
+}
+
+.link-icon{
+    margin-right: 0.2rem;
+    filter: invert();
+}
+
+
+/* Resizing Content */
+/* @media (max-width: 1300px){
+    :root{
+        --contentWidth: 45%;
+    }
+} */
