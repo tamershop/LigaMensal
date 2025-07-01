@@ -5,18 +5,13 @@ const tables = {
     'digimonQuinta': 'https://docs.google.com/spreadsheets/d/e/2PACX-1vTLfmCs3onjWbgjjbQb5-ickZ-oIroNkiyuq3jZFh1VqeVU55TOxtycTcNpE56IRU9XxeQmk0CZCwKz/pubhtml?widget=true&amp;headers=false'
 };
 
-let currentTable;
-
 function setCurrentTable(table){
-    currentTable = table;
-
     if (tables[table]) {
-        document.getElementById('table-iframe').src = tables[table];
+        return document.getElementById('table-iframe').src = tables[table];
     } else {
         setCurrentTable('pokemonGlc');
         return console.warn(`No table found for key: ${table}`);
     }
-    return true;
 }
 
 document.querySelectorAll('.tab-link').forEach(element => {
